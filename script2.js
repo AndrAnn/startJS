@@ -1,10 +1,22 @@
 "use strict";
-let result = prompt("Введи число");
-if(result > 0){
-    alert ("1, значение больше нуля");
-} else if (result < 0){
-    alert ("-1, значение меньше нуля");
+let login = prompt("Кто там?");
+
+if(login === "Админ"){
+
+    let password = prompt("Пароль?");
+    
+    if(password === "Я главный"){
+        alert ("Здравствуйте!");
+    } else if(password === null){
+        alert ("Отменено");
+    } 
+    else {
+        alert ("Неверный пароль");
+    }
+
+} else if (login === null){
+    alert ("Отменено");
 } else {
-    alert ("0, значение == нулю");
-}
+    alert ("Я вас не знаю");
+} 
 
